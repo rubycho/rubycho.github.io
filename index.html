@@ -7,216 +7,172 @@
             integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
-    <body class="ui container">
-        <h1>Cho Sung Jae</h1>
-        <a href="https://github.com/rubycho/" target="blank">
-            <i class="github large icon"></i>
-        </a>
-        <a href="mailto:rubycho@outlook.kr">
-            <i class="envelope large icon"></i>
-        </a>
+    <body>
+        <div id="app" class="ui container">
+            <h1>Cho Sung Jae</h1>
 
-        <div class="ui divider"></div>
+            <icon-link url="https://github.com/rubycho/" icon="github"></icon-link>
+            <icon-link url="mailto:rubycho@outlook.kr" icon="envelope"></icon-link>
 
-        <section>
-            <h2>Research Interest</h2>
-            <ul>
-                <li>Deep Learning Systems</li>
-                <li>Computer Vision</li>
-            </ul>
-        </section>
+            <div class="ui divider"></div>
 
-        <div class="ui hidden divider"></div>
-
-        <section>
-            <h2>Education</h2>
-            <article>
-                <h3>Soongsil University</h3>
+            <m-section title="Research Interest">
                 <ul>
                     <li>
-                        <a href="http://smartsw.ssu.ac.kr" target="blank">Smart Systems Software</a>,
-                        B.S. (2016.03 - 2020.08, Expected)
-                    </li>
-                    <li>GPA: 4.38 / 4.50</li>
-                    <li>Major-Calculated GPA: 4.45 / 4.50</li>
-                </ul>
-            </article>
-        </section>
-
-        <div class="ui hidden divider"></div>
-
-        <section>
-            <h2>Language Skills</h2>
-            <article>
-                <h3>English</h3>
-                <ul>
-                    <li>TEPS 409 (exam date: 2019.10.19)</li>
-                    <li>TOEIC 955 (exam date: 2020.04.26)</li>
-                </ul>
-            </article>
-        </section>
-
-        <div class="ui hidden divider"></div>
-
-        <section>
-            <h2>Activities</h2>
-            <article>
-                <h3>Intern in LIG NEX1</h3>
-                <ul>
-                    <li>during undergraduate (2019.07 - 2019.08)</li>
-                    <li>developed crawling software using Selenium with chrome driver</li>
-                </ul>
-            </article>
-            <article>
-                <h3>Developer in Department of Smart Systems Software</h3>
-                <ul>
-                    <li>during undergraduate (2017.07 - 2017.08)</li>
-                    <li>developed new website using Flask, RequireJS</li>
-                </ul>
-            </article>
-            <article>
-                <h3>Developer in Club YourSSU</h3>
-                <ul>
-                    <li>during undergraduate (2016.03 - 2019.02)</li>
-                    <li>maintained</li>
-                    <ul>
-                        <li>API Server using Flask</li>
-                        <li>Web Client using Vue.JS</li>
-                        <li>Android Application using Java, MVC</li>
-                    </ul>
-                </ul>
-            </article>
-        </section>
-
-        <div class="ui hidden divider"></div>
-
-        <section>
-            <h2>Personal Projects</h2>
-            <article>
-                <h3>Computer Vision Jupyter Notebooks (cv-notes)</h3>
-                <ul>
-                    <li>during 2020.08 - current</li>
-                    <li>
-                        writing 
-                        <a href="https://github.com/rubycho/cv-notes" target="blank">jupyter notebook files</a>,
-                        related to computer vision, such as classification, segmentation, GAN.
+                        <i class="refresh loading icon"></i>
                     </li>
                 </ul>
-            </article>
-            <article>
-                <h3>Flickr Image Downloader (FlickrDataset)</h3>
-                <ul>
-                    <li>during 2020.08 - current</li>
-                    <li>
+            </m-section>
+
+            <div class="ui hidden divider"></div>
+
+            <m-section title="Education">
+                <education-article
+                    school="Soongsil University"
+                    dep="Smart Systems Software"
+                    dep-url="http://smartsw.ssu.ac.kr"
+                    detail="B.S. (2016.03 - 2021.02)"
+                    gpa="4.38 / 4.50"
+                    mgpa="4.45 / 4.50"
+                >
+            </m-section>
+
+            <div class="ui hidden divider"></div>
+
+            <m-section title="Language Skills">
+                <lang-article
+                    lang="English"
+                    names="TEPS, TOEIC"
+                    scores="409, 955"
+                    exam-dates="2019.10.19, 2020.04.26"
+                >
+            </m-section>
+
+            <div class="ui hidden divider"></div>
+
+            <m-section title="Activities">
+                <general-article
+                    name="Intern in LIG NEX1"
+                    date-detail="during undergraduate (2019.07 - 2019.08)"
+                    html-detail="developed crawling software using Selenium with chrome driver"
+                ></general-article>
+                <general-article
+                    name="Developer in Department of Smart Systems Software"
+                    date-detail="during undergraduate (2017.07 - 2017.08)"
+                    html-detail="developed new website using Flask, RequireJS"
+                ></general-article>
+                <general-article
+                    name="Developer in Club YourSSU"
+                    date-detail="during undergraduate (2016.03 - 2019.02)"
+                    html-detail="
+                        maintained
+                        <ul>
+                            <li>API Server using Flask</li>
+                            <li>Web Client using Vue.JS</li>
+                            <li>Android Application using Java, MVC</li>
+                        </ul>"
+                ></general-article>
+            </m-section>
+
+            <div class="ui hidden divider"></div>
+
+            <m-section title="Personal Projects">
+                <general-article
+                    name="Computer Vision Jupyter Notebooks (cv-notes)"
+                    date-detail="during 2020.08 - current"
+                    html-detail="
+                        writing
+                        <a href='https://github.com/rubycho/cv-notes'>jupyter notebook files</a>,
+                        related to computer vision, such as classification, segmentation, GAN."
+                ></general-article>
+                <general-article
+                    name="Flickr Image Downloader (FlickrDataset)"
+                    date-detail="during 2020.08 - current"
+                    html-detail="
                         developed 
-                        <a href="https://github.com/rubycho/FlickrDataset" target="blank">simple kotlin program</a>
+                        <a href='https://github.com/rubycho/FlickrDataset'>simple kotlin program</a>
                         that can:
-                    </li>
-                    <ul>
-                        <li>download images by keyword from flickr.</li>
-                        <li>view individual images, select images to delete.</li>
-                    </ul>
-                </ul>
-            </article>
-            <article>
-                <h3>Controlling Pi using web (WebPI)</h3>
-                <ul>
-                    <li>during undergraduate (2020.01 - 2020.03), as Graduation Project</li>
-                    <li>
+                        <ul>
+                            <li>download images by keyword from flickr.</li>
+                            <li>view individual images, select images to delete.</li>
+                        </ul>"
+                ></general-article>
+                <general-article
+                    name="Controlling Pi using web (WebPI)"
+                    date-detail="during undergraduate (2020.01 - 2020.03), as Graduation Project"
+                    html-detail="
                         developed
-                        <a href="https://github.com/rubycho/webpi" target="blank">API</a>
+                        <a href='https://github.com/rubycho/webpi'>API</a>
                         and
-                        <a href="https://github.com/rubycho/webpi-app" target="blank">Web Client</a>
-                        using Django, React with mobx</li>
-            </article>
-            <article>
-                <h3>SSU Subject Parser (ssu-timetable)</h3>
-                <ul>
-                    <li>during undergraduate(2018.12 - 2020.02)</li>
-                    <li>
+                        <a href='https://github.com/rubycho/webpi-app'>Web Client</a>
+                        using Django, React with mobx"
+                ></general-article>
+                <general-article
+                    name="SSU Subject Parser (ssu-timetable)"
+                    date-detail="during undergraduate(2018.12 - 2020.02)"
+                    html-detail="
                         developed a python
-                        <a href="https://github.com/rubycho/ssu-timetable" target="blank">package</a>
-                        using BeautifulSoup
-                    </li>
-                </ul>
-            </article>
-        </section>
+                        <a href='https://github.com/rubycho/ssu-timetable'>package</a>
+                        using BeautifulSoup"
+                ></general-article>
+            </m-section>
 
-        <div class="ui hidden divider"></div>
+            <div class="ui hidden divider"></div>
 
-        <section>
-            <h2>Certifications</h2>
-            <article>
-                <h3>Course: Computer Vision</h3>
-                <ul>
-                    <li>
-                        on <a href="https://ai.koipa.or.kr/" target="blank">AI Innovation Square</a>, South Korea
-                    </li>
-                    <li>
-                        <a href="https://drive.google.com/file/d/14KAQCe8c68rRgPZw4s-pFxEPQD3f-fau/view?usp=sharing" target="blank">certified</a>
-                        @ 2020.08
-                    </li>
-                </ul>
-            </article>
-            <article>
-                <h3>Online Course: Machine Learning</h3>
-                <ul>
-                    <li>on Coursera (Stanford Online), Prof. Andrew Ng's class</li>
-                    <li>
-                        <a href="https://www.coursera.org/account/accomplishments/certificate/KJS2CTEU8F93" target="blank">certified</a>
-                        @ 2020.06
-                    </li>
-                </ul>
-            </article>
-            <article>
-                <h3>Online Course: Neural Networks and Deep Learning</h3>
-                <ul>
-                    <li>on Coursera (deeplearning.ai), Prof. Andrew Ng's class</li>
-                    <li>
-                        <a href="https://www.coursera.org/account/accomplishments/certificate/6QGAWJR5Y74B" target="blank">certified</a>
-                        @ 2020.06
-                    </li>
-                </ul>
-            </article>
-            <article>
-                <h3>Online Course: Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization</h3>
-                <ul>
-                    <li>on Coursera (deeplearning.ai), Prof. Andrew Ng's class</li>
-                    <li>
-                        <a href="https://www.coursera.org/account/accomplishments/certificate/LEASFR8WK6QF" target="blank">certified</a>
-                        @ 2020.07
-                    </li>
-                </ul>
-            </article>
-            <article>
-                <h3>Online Course: Structuring Machine Learning Projects</h3>
-                <ul>
-                    <li>on Coursera (deeplearning.ai), Prof. Andrew Ng's class</li>
-                    <li>
-                        <a href="https://www.coursera.org/account/accomplishments/certificate/3K6AZTZJCZ8M" target="blank">certified</a>
-                        @ 2020.07
-                    </li>
-                </ul>
-            </article>
-            <article>
-                <h3>Online Course: Convolutional Neural Networks</h3>
-                <ul>
-                    <li>on Coursera (deeplearning.ai), Prof. Andrew Ng's class</li>
-                    <li>
-                        <a href="https://www.coursera.org/account/accomplishments/certificate/H8E948TS7QTL" target="blank">certified</a>
-                        @ 2020.08
-                    </li>
-                </ul>
-            </article>
-            <article>
-                <h3>Certificate: 정보처리기사</h3>
-                <ul>
-                    <li>on 한국산업인력공단, South Korea</li>
-                    <li>certified @ 2019.08</li>
-                </ul>
-            </article>
-        </section>
+            <m-section title="Certifications">
+                <general-article
+                    name="Course: Computer Vision"
+                    date-detail="on AI Innovation Square, South Korea"
+                    html-detail="
+                        <a href='https://drive.google.com/file/d/14KAQCe8c68rRgPZw4s-pFxEPQD3f-fau/view?usp=sharing'>certified</a>
+                        @ 2020.08"
+                ></general-article>
+                <general-article
+                    name="Online Course: Machine Learning"
+                    date-detail="on Coursera (Stanford Online), Prof. Andrew Ng's class"
+                    html-detail="
+                        <a href='https://www.coursera.org/account/accomplishments/certificate/KJS2CTEU8F93'>certified</a>
+                        @ 2020.06"
+                ></general-article>
+                <general-article
+                    name="Online Course: Neural Networks and Deep Learning"
+                    date-detail="on Coursera (deeplearning.ai), Prof. Andrew Ng's class"
+                    html-detail="
+                        <a href='https://www.coursera.org/account/accomplishments/certificate/6QGAWJR5Y74B'>certified</a>
+                        @ 2020.06"
+                ></general-article>
+                <general-article
+                    name="Online Course: Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization"
+                    date-detail="on Coursera (deeplearning.ai), Prof. Andrew Ng's class"
+                    html-detail="
+                        <a href='https://www.coursera.org/account/accomplishments/certificate/LEASFR8WK6QF'>certified</a>
+                        @ 2020.07"
+                ></general-article>
+                <general-article
+                    name="Online Course: Structuring Machine Learning Projects"
+                    date-detail="on Coursera (deeplearning.ai), Prof. Andrew Ng's class"
+                    html-detail="
+                        <a href='https://www.coursera.org/account/accomplishments/certificate/3K6AZTZJCZ8M'>certified</a>
+                        @ 2020.07"
+                ></general-article>
+                <general-article
+                    name="Online Course: Convolutional Neural Networks"
+                    date-detail="on Coursera (deeplearning.ai), Prof. Andrew Ng's class"
+                    html-detail="
+                        <a href='https://www.coursera.org/account/accomplishments/certificate/H8E948TS7QTL'>certified</a>
+                        @ 2020.08"
+                ></general-article>
+                <general-article
+                    name="Certificate: 정보처리기사"
+                    date-detail="on 한국산업인력공단, South Korea"
+                    html-detail="certified @ 2019.08"
+                ></general-article>
+            </m-section>
+            
+            <div class="ui hidden divider"></div>
+        </div>
         
-        <div class="ui hidden divider"></div>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+        <script src="./index.js"></script>
     </body>
 </html>
