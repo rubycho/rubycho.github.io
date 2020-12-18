@@ -21,7 +21,7 @@ let MSection = {
 };
 
 let EducationArticle = {
-    props: ['school', 'dep', 'dep-url', 'detail', 'gpa', 'mgpa'],
+    props: ['school', 'dep', 'dep-url', 'detail', 'gpa'],
     template: 
         '<article> \
             <h3>{{school}}</h3> \
@@ -31,7 +31,6 @@ let EducationArticle = {
                     {{detail}} \
                 </li> \
                 <li>GPA: {{gpa}}</li> \
-                <li v-if="mgpa">Major-Calculated GPA: {{mgpa}}</li> \
             </ul> \
         </article>'
 };
@@ -70,7 +69,7 @@ let GeneralArticle = {
         '<article> \
             <h3>{{name}}</h3> \
             <ul> \
-                <li>{{dateDetail}}</li> \
+                <li v-if="dateDetail">{{dateDetail}}</li> \
                 <li v-html="htmlDetail"></li> \
             </ul> \
         </article>'
